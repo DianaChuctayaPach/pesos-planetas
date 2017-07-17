@@ -1,60 +1,47 @@
-    var usuario = prompt("CUAL ES TU PESO?");
-    var planeta = parseInt(prompt("Elige tu planeta:\n 1 es marte\n 2 es jupiter \n 3 es mercurio \n 4 es venus \n 5 es saturno \n 6 urano \n 7 neptuno \n 8 pluton"));
-    var peso = parseInt(usuario);
+    var peso = Number(prompt("CUAL ES TU PESO?"));
+    var planeta = Number(prompt("Elige tu planeta:\n 1 es marte\n 2 es jupiter \n 3 es mercurio \n 4 es venus \n 5 es saturno \n 6 urano \n 7 neptuno \n 8 pluton"));
     var g_tierra = 9.8;
-    var g_marte = 3.7;
-    var g_jupiter = 24.8;
-    var g_mercurio =3.72;
-    var g_venus = 8.82;
-    var g_saturno = 9.01;
-    var g_urano = 8.72;
-    var g_neptuno = 10.97;
-    var g_pluton = 0.65 
+    var gravedad;
     var peso_final;
     var nombre;
 
-    if(planeta == 1)
-    {
-      peso_final = peso * g_marte / g_tierra;
+    switch(planeta){
+    case 1:
+      gravedad= 3.7;
        nombre = "Marte";
-    }
-    else if(planeta == 2)
-    {
-      peso_final = peso * g_jupiter / g_tierra;
-       nombre = "Jupiter";
-    }
-    else if (planeta == 3)
-    {
-      peso_final = peso * g_mercurio / g_tierra;
+    break;
+    case 2:
+      gravedad = 24.8;
+      nombre = "Jupiter";
+    break;
+    case 3:
+      gravedad = 3.72;
       nombre = "Mercurio";
-    }
-      else if (planeta == 4)
-    {
-      peso_final = peso * g_venus / g_tierra;
+    break;
+    case 4:
+      gravedad = 8.82;
       nombre = "Venus";
-    }
-      else if (planeta == 5)
-    {
-      peso_final = peso * g_saturno / g_tierra;
+    break;
+    case 5:
+      gravedad = 9.01;
       nombre = "Saturno";
-    }
-      else if (planeta == 6)
-    {
-      peso_final = peso * g_urano / g_tierra;
+    break;
+    case 6:
+      gravedad = 8.72;
       nombre = "Urano";
-    }
-      else if (planeta == 7)
-    {
-      peso_final = peso * g_neptuno / g_tierra;
+    break;
+    case 7:
+      gravedad = 10.97;
       nombre = "Neptuno";
-    }  else if (planeta == 8)
-    {
-      peso_final = peso * g_pluton/ g_tierra;
+    break;
+    case 8:
+      gravedad = 0.65;
       nombre = "Pluton";
-    }else 
-    {
+    break;
+    default:
       alert ("Esa ocpión no existe");
     }
-    peso_final = parseInt(peso_final);
 
-    document.write("Tu peso en "  + nombre + " es <strong> " + peso_final + "</strong> Kilos");
+    peso_final = peso * gravedad / g_tierra;
+
+    document.write("Tu peso en "  + nombre + " es <strong> " + peso_final.toFixed(2) + "</strong> Kilos");

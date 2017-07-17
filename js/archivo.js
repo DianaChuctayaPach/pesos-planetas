@@ -39,7 +39,7 @@ case 8:
   nombre = "Pluton";
 break;
 default:
-  alert ("Esa ocpión no existe");
+  alert ("Esa opción no existe");
 }
 
 peso_final = peso * gravedad / g_tierra;

@@ -5,22 +5,22 @@
 	<title>TU PESO EN OTROS PLANETAS</title>
     <link rel="stylesheet" href="css/css.css" />
     <h1><font color= "White" face="Aharoni" size="48">TU PESO EN OTRO PLANETA</font></h1>
+		<script src= "js/archivo.js"></script>
 </head>
 <body background="http://img.huffingtonpost.com/asset/1910_1000/569fbfd72a00002c00030e3e.jpeg">
-	
-	<script src= "js/archivo.js"></script>
-	<br/><br/>
-	<select name="js/archivo.js" id="js/archivo.js">
-		<option value ="Marte"> Marte </option>
-		<option value ="Jupiter"> Jupiter </option>
-		<option value ="Mercurio"> Mercurio </option>
-		<option value ="Venus"> Venus </option>
-		<option value ="Saturno">Saturno </option>
-		<option value ="Urano"> Urano </option>
-		<option value ="Neptuno"> Neptuno </option>
-		<option value ="Pluton"> Pluton </option>
+	<p>Tu peso: <input type="text" id="peso" size="5"/> Kg</p>
+	<select id="planetas" onchange="calcular()" style="font-size:90%">
+		<option value ="0"> Elige planeta </option>
+		<option value ="1"> Marte </option>
+		<option value ="2"> Jupiter </option>
+		<option value ="3"> Mercurio </option>
+		<option value ="4"> Venus </option>
+		<option value ="5">Saturno </option>
+		<option value ="6"> Urano </option>
+		<option value ="7"> Neptuno </option>
+		<option value ="8"> Pluton </option>
 	</select>
-	<input type = "number" placeholder="1" maxlength="1" value="Escribe la opción" size="4">
+	<div id="resultado"></div>
 	<ul>
 		<li>Mas información sobre planetas al siguiente enlace </li>
 	</ul>
